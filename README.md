@@ -7,7 +7,7 @@ TravelTrucks is a user-friendly web application tailored for a camper rental com
 ## How to use
 
 - **Explore Campers**: Browse a well-organized catalog showcasing a variety of campers.
-- **Filters Campers**: Narrow down your search using filters for price, size, transmission type and equipment. 
+- **Filter Campers**: Narrow down your search using filters for price, size, transmission type and equipment. 
 - **View Camper Details**: Access dedicated pages for each camper with in-depth specifications, user reviews, and a gallery of images.
 - **Book a camper**: Reserve your preferred camper through an intuitive form and get instant confirmation via notifications.
 - **Add to favorites**: Save your top choices to a personalized favorites list for quick access later.
