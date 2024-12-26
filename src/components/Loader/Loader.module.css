@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: visible;
+  padding: 0 300px;
+}
+
+.loader {
+  width: 100px;
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-150px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}

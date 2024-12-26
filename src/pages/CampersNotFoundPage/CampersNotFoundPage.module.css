@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.error {
+  padding-top: 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--main);
+}
+
+.img {
+  padding-top: 70px;
+}

@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  width: 631px;
+  height: 588px;
+  /* padding: 44px; */
+  flex-direction: column;
+  gap: 100px;
+  border-radius: 10px;
+}
+
+.icon {
+  box-sizing: border-box;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background: #f2f4f7;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #e44848;
+  padding: 15px 21px;
+}
+.header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+}
+
+.comment {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}

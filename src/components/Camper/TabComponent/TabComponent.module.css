@@ -1,0 +1,26 @@
+.tabsWrapper {
+  border-bottom: solid 1px #dadde1;
+  display: inline-flex;
+
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  margin-bottom: 44px;
+}
+
+.tabButton {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+  padding: 0;
+  padding-bottom: 24px;
+  border: transparent;
+
+  background-color: white;
+}
+
+.tabButton.active {
+  border-bottom: 2px solid red;
+}

@@ -1,0 +1,83 @@
+.heroBox {
+  background-image: url("../../assets/img/hero.png");
+  background-size: cover;
+  background-position: center;
+  height: calc(105vh - 94px);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .heroBox {
+    background-image: url("../../assets/img/hero.png");
+  }
+}
+
+.wrapper {
+  position: absolute;
+  left: 64px;
+  top: 260px;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0.66667;
+  color: #f7f7f7;
+  padding-bottom: 16px;
+}
+
+.text {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #f7f7f7;
+  padding-bottom: 40px;
+}
+
+.buttonLink {
+  border-radius: 200px;
+  outline: transparent;
+  border: transparent;
+  width: 173px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: var(--button);
+  cursor: pointer;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  text-align: center;
+}
+
+.buttonLink:hover {
+  background-color: #d84343;
+}
+/* --------------eperiment  */
+
+.container {
+  min-width: 320px;
+  max-width: 375px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
+}

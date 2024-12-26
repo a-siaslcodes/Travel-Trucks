@@ -1,0 +1,124 @@
+.wrapper {
+  display: flex;
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+}
+
+.camperImg {
+  min-width: 290px;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+  padding-left: 24px;
+}
+
+.header {
+  display: flex;
+  padding-bottom: 8px;
+  justify-content: space-between;
+}
+
+.name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #101828;
+}
+.price {
+  padding-right: 12px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #101828;
+}
+.priceBox {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.likeButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-items: center;
+}
+
+.likeButton:hover {
+  fill: #e44848;
+}
+
+.active {
+  fill: #e44848;
+}
+
+.subInfoBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  padding-bottom: 24px;
+}
+.specsIcon {
+  padding-right: 4px;
+}
+.reviews {
+  padding-right: 16px;
+  text-decoration: underline;
+}
+.subBox {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  display: block;
+  max-width: 525px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
+}
+
+.button {
+  box-sizing: border-box;
+  outline: transparent;
+  border: transparent;
+  margin-top: 24px;
+  border-radius: 200px;
+  width: 166px;
+  height: 56px;
+  background: var(--button);
+  padding: 16px 40px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
