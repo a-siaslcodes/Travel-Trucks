@@ -55,6 +55,7 @@ npm run build
 ## Author
 
 Developed by anastasia1s
+
 Email:  slobodyanik.a97@gmail.com
 
 
