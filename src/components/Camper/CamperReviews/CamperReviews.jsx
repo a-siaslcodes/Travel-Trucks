@@ -2,15 +2,6 @@ import css from "./CamperReviews.module.css";
 import specs from "../../../assets/specs.svg";
 
 const CamperReviews = ({ camper }) => {
-  // const results = camper.reviews.map((item) => {
-  //   const name = item.reviewer_name;
-  //   const rate = item.reviewer_rating;
-  //   const comment = item.comment;
-  //   console.log(name);
-  //   console.log(rate);
-  //   console.log(comment);
-  // });
-
   const maxRating = 5;
 
   return (

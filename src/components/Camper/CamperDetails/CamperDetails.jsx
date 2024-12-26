@@ -1,7 +1,6 @@
 import css from "./CamperDetails.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import specs from "../../../assets/specs.svg";
 
 import CamperFeatures from "../CamperFeatures/CamperFeatures";
 import CamperReviews from "../CamperReviews/CamperReviews";

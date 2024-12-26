@@ -101,18 +101,6 @@
   position: relative;
 }
 
-/* .error {
-  position: absolute;
-  right: 0.5rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--inputs);
-  color: red;
-  font-size: 0.75rem;
-  pointer-events: none;
-  padding: 0 0.25rem;
-} */
-
 .error {
   position: absolute;
   right: 0.5rem;
