@@ -26,23 +26,9 @@ const Catalog = () => {
 
   const [page, setPage] = useState(1);
 
-  // useEffect(() => {
-  //   const applyFilters = async () => {
-  //     if (filters && Object.keys(filters).length > 0) {
-  //       dispatch(clearCampers());
-  //       setPage(1);
-  //       dispatch(fetchCampers({ ...filters, page: 1 }));
-  //     } else {
-  //       dispatch(fetchCampers({ page: 1 }));
-  //     }
-  //   };
-
-  //   applyFilters();
-  // }, [dispatch, filters]);
-
   useEffect(() => {
     const applyFilters = async () => {
-      dispatch(clearCampers()); // Очищуємо тільки `campers`
+      dispatch(clearCampers());
       setPage(1);
       dispatch(fetchCampers({ ...filters, page: 1 }));
     };

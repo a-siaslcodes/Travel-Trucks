@@ -20,15 +20,12 @@ const formOptions = [
 ];
 
 const Filters = ({ values, onChange }) => {
-  const handleEquipmentChange = (e) => {
-    onChange(e); // Передаємо оригінальний event обробнику
-    console.log(e.target.value, "this is e");
+  const handleEquipmentChange = (event) => {
+    onChange(event);
   };
 
-  const handleFormChange = (e) => {
-    console.log(e.target.value, "this is e");
-
-    onChange(e); // Передаємо оригінальний event обробнику
+  const handleFormChange = (event) => {
+    onChange(event);
   };
 
   return (

@@ -1,0 +1,24 @@
+.subInfoBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+  padding-bottom: 24px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.reviews {
+  padding-right: 16px;
+  text-decoration: underline;
+}
+.specsIcon {
+  padding-right: 4px;
+}

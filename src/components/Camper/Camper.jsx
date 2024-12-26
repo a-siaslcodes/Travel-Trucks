@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/favoritesSlice";
 import { addFavorite } from "../../redux/favoritesSlice";
+import SubInfo from "./SubInfo/SubInfo";
 
 const Camper = ({ camper }) => {
   const dispatch = useDispatch();
@@ -51,21 +52,7 @@ const Camper = ({ camper }) => {
           </div>
         </div>
 
-        <div className={css.subInfoBox}>
-          <p className={css.subBox}>
-            <svg className={css.specsIcon} width={16} height={16}>
-              <use href={`${specs}#icon-star-pressed`}></use>
-            </svg>
-            {camper.rating}
-          </p>
-          <p className={css.reviews}>({camper.reviews.length} Reviews)</p>
-          <p className={css.subBox}>
-            <svg className={css.specsIcon} width={16} height={16}>
-              <use href={`${specs}#icon-map`}></use>
-            </svg>
-            {camper.location}
-          </p>
-        </div>
+        <SubInfo camper={camper} />
 
         <p className={css.description}>{camper.description}</p>
 

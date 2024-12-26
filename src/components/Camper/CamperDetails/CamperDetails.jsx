@@ -8,33 +8,13 @@ import CamperReviews from "../CamperReviews/CamperReviews";
 import TabComponent from "../TabComponent/TabComponent";
 import CamperForm from "../CamperForm/CamperForm";
 import Loader from "../../Loader/Loader";
+import SubInfo from "../SubInfo/SubInfo";
 
 import { fetchCamperById } from "../../../redux/operations";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCamperById } from "../../../redux/selectors";
 
 const CamperDetails = () => {
-  // const { id } = useParams();
-  // const [camper, setCamper] = useState(null);
-  // const [isActiveTab, setIsActiveTab] = useState({
-  //   feature: true,
-  //   reviews: false,
-  // });
-
-  // useEffect(() => {
-  //   const getCamperDetails = async () => {
-  //     try {
-  //       const data = await getCamperbyId(id);
-  //       setCamper(data);
-  //       console.log(data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //   getCamperDetails();
-  // }, [id]);
-
   const dispatch = useDispatch();
 
   const { id } = useParams();
@@ -58,18 +38,7 @@ const CamperDetails = () => {
   return (
     <div className={css.wrapper}>
       <h2 className={css.name}>{camper.name}</h2>
-      <div className={css.subInfo}>
-        <svg width={16} height={16} className={css.specsIcon}>
-          <use href={`${specs}#icon-star-pressed`}></use>
-        </svg>
-        <p className={css.reviews}>({camper.reviews.length} Reviews) </p>
-        <p className={css.location}>
-          <svg className={css.specsIcon} width={16} height={16}>
-            <use href={`${specs}#icon-map`}></use>
-          </svg>
-          {camper.location}
-        </p>
-      </div>
+      <SubInfo camper={camper} />
       <span className={css.price}>{`€${parseFloat(camper.price).toFixed(
         2
       )}`}</span>
