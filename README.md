@@ -29,7 +29,7 @@ This project is built using the following technologies:
 
 1. Clone the repository to get started:
  ```bash
-git clone [https://github.com/your-repository/travel-trucks.git] 
+git clone https://github.com/your-repository/travel-trucks.git
 ```
 
 2. Navigate to the project directory:
