@@ -27,13 +27,13 @@ const Catalog = () => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    const applyFilters = async () => {
+    const fetchData = () => {
       dispatch(clearCampers());
       setPage(1);
       dispatch(fetchCampers({ ...filters, page: 1 }));
     };
 
-    applyFilters();
+    fetchData();
   }, [dispatch, filters]);
 
   useEffect(() => {

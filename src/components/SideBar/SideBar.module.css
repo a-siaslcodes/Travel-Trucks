@@ -20,3 +20,7 @@
   outline: transparent;
   border: transparent;
 }
+
+.button:hover {
+  background-color: var(--button-hover);
+}

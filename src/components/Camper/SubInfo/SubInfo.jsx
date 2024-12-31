@@ -2,7 +2,6 @@ import css from "./SubInfo.module.css";
 import specs from "../../../assets/specs.svg";
 
 const SubInfo = ({ camper }) => {
-  console.log(camper);
   return (
     <div className={css.subInfoBox}>
       <p className={css.wrapper}>

@@ -1,25 +1,31 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
 import Navigation from "./components/Navigation/Navigation";
-import HomePage from "./pages/HomePage/HomePage";
-import CatalogPage from "./pages/CatalogPage/CatalogPage";
-import CamperDetailsPage from "./pages/CamperDetailsPage/CamperDetailsPage";
-import PageNotFound from "./pages/PageNotFound/PageNotFound";
-import FavoritePage from "./pages/FavoritePage/FavoritePage";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
+const CamperDetailsPage = lazy(() =>
+  import("./pages/CamperDetailsPage/CamperDetailsPage")
+);
+const PageNotFound = lazy(() => import("./pages/PageNotFound/PageNotFound"));
+const FavoritePage = lazy(() => import("./pages/FavoritePage/FavoritePage"));
 
 function App() {
   return (
     <div>
       <Navigation />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/catalog" element={<CatalogPage />} />
-        <Route path="/catalog/:id" element={<CamperDetailsPage />} />
-        <Route path="/favorite" element={<FavoritePage />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+      <Suspense>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<CamperDetailsPage />} />
+          <Route path="/favorite" element={<FavoritePage />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }

@@ -57,7 +57,6 @@ const SideBar = () => {
 
     dispatch(clearFilter());
     dispatch(setFilter(filters));
-    dispatch(fetchCampers(filters));
 
     setFormValues({
       location: "",

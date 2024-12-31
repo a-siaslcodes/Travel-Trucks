@@ -51,5 +51,5 @@ const campersSlice = createSlice({
   },
 });
 
-export const { clearCampers, addFavorite } = campersSlice.actions;
+export const { clearCampers } = campersSlice.actions;
 export default campersSlice.reducer;
