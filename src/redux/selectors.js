@@ -14,3 +14,9 @@ export const selectError = (state) => state.campers.error;
 export const selectTotalCampers = (state) => state.campers.total;
 
 export const selectFavorites = (state) => state.campers.favorites;
+
+export const selectPage = (state) => state.campers.page;
+
+export const selectLimit = (state) => state.campers.limit;
+
+export const selectHasNextPage = (state) => state.campers.hasNextPage;

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setFilter, clearFilter } from "../../redux/filtersSlice";
-import { fetchCampers } from "../../redux/operations";
 import css from "./SideBar.module.css";
 import Location from "./Location/Location";
 import Filters from "./Filters/Filters";

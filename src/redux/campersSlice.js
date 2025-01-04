@@ -1,18 +1,35 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchCampers, fetchCamperById } from "./operations";
 
+const initialState = {
+  items: [],
+  total: 0,
+  loading: false,
+  error: false,
+  hasNextPage: false,
+  limit: 4,
+  page: 1,
+};
+
+const calculateHasNextPage = (state) => {
+  const totalPages = Math.ceil(state.total / state.limit);
+  console.log(`Total Pages: ${totalPages}, Current Page: ${state.page}`);
+  state.hasNextPage = state.page < totalPages;
+};
+
 const campersSlice = createSlice({
   name: "campers",
-  initialState: {
-    items: [],
-    total: 0,
-    loading: false,
-    error: false,
-  },
+  initialState,
   reducers: {
     clearCampers(state) {
       state.items = [];
       state.total = 0;
+    },
+    resetPage(state) {
+      state.page = 1;
+    },
+    incrementPage(state) {
+      state.page += 1;
     },
   },
   extraReducers: (builder) => {
@@ -23,14 +40,12 @@ const campersSlice = createSlice({
       })
       .addCase(fetchCampers.fulfilled, (state, action) => {
         state.loading = false;
-        state.error = false;
 
-        const newItems = action.payload.items.filter(
-          (item) =>
-            !state.items.some((existingItem) => existingItem.id === item.id)
-        );
-        state.items = [...state.items, ...newItems];
-        state.total = action.payload.total;
+        if (action.payload && action.payload.items) {
+          state.items = [...state.items, ...action.payload.items];
+          state.total = action.payload.total;
+          calculateHasNextPage(state);
+        }
       })
       .addCase(fetchCampers.rejected, (state, action) => {
         state.loading = false;
@@ -51,5 +66,5 @@ const campersSlice = createSlice({
   },
 });
 
-export const { clearCampers } = campersSlice.actions;
+export const { clearCampers, resetPage, incrementPage } = campersSlice.actions;
 export default campersSlice.reducer;

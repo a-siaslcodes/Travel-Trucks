@@ -90,9 +90,13 @@
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #fff;
-  background-color: #e44848;
+  background-color: var(--button);
   outline: none;
   border: none;
+}
+
+.button:hover {
+  background-color: var(--button-hover);
 }
 
 .inputWrapper {

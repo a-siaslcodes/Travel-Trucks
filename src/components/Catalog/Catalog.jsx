@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import css from "./Catalog.module.css";
 
 import CatalogList from "../CatalogList/CatalogList";
@@ -10,9 +10,15 @@ import {
   selectError,
   selectLoading,
   selectCampers,
-  selectTotalCampers,
+  selectPage,
+  selectLimit,
+  selectHasNextPage,
 } from "../../redux/selectors";
-import { clearCampers } from "../../redux/campersSlice";
+import {
+  clearCampers,
+  resetPage,
+  incrementPage,
+} from "../../redux/campersSlice";
 import { selectFilters } from "../../redux/filtersSlice";
 
 const Catalog = () => {
@@ -22,55 +28,46 @@ const Catalog = () => {
   const error = useSelector(selectError);
   const filters = useSelector(selectFilters);
   const campers = useSelector(selectCampers);
-  const totalCampers = useSelector(selectTotalCampers);
-
-  const [page, setPage] = useState(1);
+  const hasNextPage = useSelector(selectHasNextPage);
+  const page = useSelector(selectPage);
+  const limit = useSelector(selectLimit);
 
   useEffect(() => {
     const fetchData = () => {
       dispatch(clearCampers());
-      setPage(1);
-      dispatch(fetchCampers({ ...filters, page: 1 }));
+      dispatch(resetPage());
+      dispatch(fetchCampers({ ...filters, limit, page: 1 }));
     };
 
     fetchData();
-  }, [dispatch, filters]);
-
-  useEffect(() => {
-    if (page > 1) {
-      dispatch(
-        fetchCampers({
-          ...filters,
-          page,
-        })
-      );
-    }
-  }, [dispatch, page, filters]);
+  }, [dispatch, filters, limit]);
 
   const handleLoadMore = () => {
-    setPage((prevPage) => prevPage + 1);
+    dispatch(incrementPage());
+    dispatch(fetchCampers({ ...filters, limit, page: page + 1 }));
   };
 
-  const isLoadMoreDisabled = loading || campers.length >= totalCampers;
-
   return (
-    <div className={css.wrapper}>
-      {loading && <Loader />}
-      {error && <CampersNotFoundPage />}
-      {!loading && !error && campers.length === 0 && <CampersNotFoundPage />}
-      {!loading && !error && campers.length > 0 && (
-        <>
+    <>
+      {error ? (
+        <CampersNotFoundPage />
+      ) : (
+        <section className={css.wrapper}>
           <CatalogList campers={campers} />
-          <button
-            onClick={handleLoadMore}
-            disabled={isLoadMoreDisabled}
-            className={css.loadMoreBtn}
-          >
-            Load more
-          </button>
-        </>
+          {loading && <Loader />}
+          {hasNextPage && (
+            <button
+              className={css.loadMoreBtn}
+              type="button"
+              disabled={loading}
+              onClick={handleLoadMore}
+            >
+              Load more
+            </button>
+          )}
+        </section>
       )}
-    </div>
+    </>
   );
 };
 

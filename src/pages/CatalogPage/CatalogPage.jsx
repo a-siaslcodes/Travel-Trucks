@@ -1,7 +1,6 @@
 import Catalog from "../../components/Catalog/Catalog";
 import Container from "../../components/Container/Container";
 import SideBar from "../../components/SideBar/SideBar";
-
 import css from "./CatalogPage.module.css";
 
 const CatalogPage = () => {
