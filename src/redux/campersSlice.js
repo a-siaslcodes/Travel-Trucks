@@ -13,7 +13,6 @@ const initialState = {
 
 const calculateHasNextPage = (state) => {
   const totalPages = Math.ceil(state.total / state.limit);
-  console.log(`Total Pages: ${totalPages}, Current Page: ${state.page}`);
   state.hasNextPage = state.page < totalPages;
 };
 

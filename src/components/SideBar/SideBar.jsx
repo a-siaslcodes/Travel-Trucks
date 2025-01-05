@@ -7,14 +7,15 @@ import Filters from "./Filters/Filters";
 
 const SideBar = () => {
   const dispatch = useDispatch();
+
   const [formValues, setFormValues] = useState({
     location: "",
     equipment: {},
     form: "",
   });
 
-  const handleInputChange = (e) => {
-    const { name, value, type, checked } = e.target;
+  const handleInputChange = (event) => {
+    const { name, value, type, checked } = event.target;
 
     if (type === "checkbox") {
       setFormValues((prev) => ({
@@ -32,8 +33,8 @@ const SideBar = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const location = formValues.location.trim();
 

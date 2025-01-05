@@ -6,13 +6,13 @@ const CampersNotFoundPage = () => {
   return (
     <Container>
       <div className={css.wrapper}>
-        <img
+        {/* <img
           src={notFoundImage}
           alt="Error logo"
           className={css.img}
           width={310}
           height={280}
-        />
+        /> */}
         <p className={css.error}>No campers found, try again! </p>
       </div>
     </Container>

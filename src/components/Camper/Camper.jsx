@@ -29,7 +29,7 @@ const Camper = ({ camper }) => {
             className={css.camperImg}
           />
         ) : (
-          <div className={css.noPosterPlaceholder}>No Image</div>
+          <p>No Image</p>
         )}
       </div>
 

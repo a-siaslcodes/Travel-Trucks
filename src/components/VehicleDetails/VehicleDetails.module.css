@@ -3,12 +3,12 @@
   display: flex;
   justify-content: space-between;
 
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
   text-align: center;
-  color: #101828;
+  color: var(--main);
 }
 
 .listItem:not(:last-child) {

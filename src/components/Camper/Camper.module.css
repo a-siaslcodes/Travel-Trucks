@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  border: 1px solid #dadde1;
+  border: 1px solid var(--gray-light);
   border-radius: 20px;
   padding: 24px;
   width: 888px;
@@ -34,7 +34,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  color: #101828;
+  color: var(--main);
   max-width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -46,7 +46,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  color: #101828;
+  color: var(--main);
 }
 .priceBox {
   margin-left: auto;
@@ -63,11 +63,11 @@
 }
 
 .likeButton:hover {
-  fill: #e44848;
+  fill: var(--button);
 }
 
 .active {
-  fill: #e44848;
+  fill: var(--button);
 }
 
 .description {
@@ -82,7 +82,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #475467;
+  color: var(--text);
 }
 
 .button {

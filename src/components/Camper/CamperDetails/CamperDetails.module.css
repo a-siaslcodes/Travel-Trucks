@@ -1,16 +1,16 @@
 .name {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  color: #101828;
+  color: var(--main);
   margin-bottom: 8px;
 }
 .price {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  color: #101828;
+  color: var(--main);
 }
 
 .imgBox {
@@ -35,11 +35,11 @@
 }
 
 .description {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  color: #475467;
+  color: var(--text);
   margin-bottom: 60px;
 }
 
@@ -50,7 +50,7 @@
   padding: 44px 80px;
   width: 687px;
   height: 588px;
-  background: #f7f7f7;
+  background: var(--inputs);
 }
 
 .nav {
@@ -58,11 +58,11 @@
   gap: 40px;
 }
 .link {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
-  color: #101828;
+  color: var(--main);
 }
 
 .box {
@@ -70,7 +70,6 @@
   gap: 40px;
   margin-bottom: 80px;
   height: 100%;
-  /* background-color: #475467; */
   align-items: center;
   justify-content: center;
 }

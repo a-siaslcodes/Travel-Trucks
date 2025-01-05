@@ -22,7 +22,7 @@
   font-weight: 600;
   font-size: 48px;
   line-height: 0.66667;
-  color: #f7f7f7;
+  color: var(--inputs);
   padding-bottom: 16px;
 }
 
@@ -31,7 +31,7 @@
   font-weight: 600;
   font-size: 24px;
   line-height: 1.33333;
-  color: #f7f7f7;
+  color: var(--inputs);
   padding-bottom: 40px;
 }
 
@@ -57,4 +57,3 @@
 .buttonLink:hover {
   background-color: #d84343;
 }
- 

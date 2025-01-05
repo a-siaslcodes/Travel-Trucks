@@ -58,7 +58,7 @@
 }
 
 .checkbox:checked + .checkboxCustom {
-  border: 1px solid red;
+  border: 1px solid var(--button-hover);
 }
 
 .icon {
