@@ -4,7 +4,7 @@
 
 TravelTrucks is a user-friendly web application tailored for a camper rental company. It empowers users to explore a diverse catalog of campers, refine their search using advanced filters, and view comprehensive details for each camper. The platform also features an interactive booking system with a seamless reservation process and timely notifications.
 
-## How to use
+## ✨How to use
 
 - **Explore Campers**: Browse a well-organized catalog showcasing a variety of campers.
 - **Filter Campers**: Narrow down your search using filters for price, size, transmission type and equipment. 
@@ -13,7 +13,7 @@ TravelTrucks is a user-friendly web application tailored for a camper rental com
 - **Add to favorites**: Save your top choices to a personalized favorites list for quick access later.
 - **Check reviews**: You can check the camper's reviews to ensure you are booking the best camper available for your needs. 
 
-## Technologies
+## 🛠Technologies
 
 This project is built using the following technologies:
 
@@ -54,7 +54,7 @@ npm run build
 
 ## Author
 
-Developed by anastasia1s
+Developed by a-siaslcodes
 
 Email:  slobodyanik.a97@gmail.com
 
